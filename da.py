@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-
-users = {}
+users = {}  # In-memory user store
 
 @app.route('/', methods=['GET'])
 def index():
@@ -28,4 +27,3 @@ def submit():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
